@@ -29,6 +29,11 @@
                                 <items>
                                     <navigationItem title="Road Trip DJ" id="pB4-pH-BSx"/>
                                 </items>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="fy5-eI-sQC"/>
+                                    </mask>
+                                </variation>
                             </navigationBar>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="Sra-8L-WMP">
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
