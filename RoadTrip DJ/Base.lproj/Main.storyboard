@@ -17,6 +17,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="dHG-5b-vO2">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <animations/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="eV5-md-6li">
+                                    <size key="itemSize" width="360" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="qAu-CF-lYW">
+                                        <rect key="frame" x="8" y="64" width="360" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="360" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <animations/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <animations/>
+                                        <color key="backgroundColor" red="0.92039834529999998" green="0.26564412710000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="9aE-mu-6tI" id="sJ9-sf-NmE"/>
+                                </connections>
+                            </collectionView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="AtX-ST-Xse" customClass="PlayerBar">
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                                 <animations/>
@@ -35,10 +63,24 @@
                         <animations/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="dHG-5b-vO2" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="6vB-XX-UJE"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dHG-5b-vO2" secondAttribute="bottom" id="I9n-we-eHS"/>
+                            <constraint firstItem="dHG-5b-vO2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="L8K-QS-vDu"/>
+                            <constraint firstAttribute="trailing" secondItem="dHG-5b-vO2" secondAttribute="trailing" id="LQx-sb-Xdl"/>
                             <constraint firstAttribute="trailing" secondItem="AtX-ST-Xse" secondAttribute="trailing" id="Q1G-V0-kqK"/>
+                            <constraint firstItem="dHG-5b-vO2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="SJg-9F-Z4o"/>
+                            <constraint firstItem="dHG-5b-vO2" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-64" id="biB-Sa-sC9"/>
+                            <constraint firstItem="AtX-ST-Xse" firstAttribute="top" secondItem="dHG-5b-vO2" secondAttribute="bottom" constant="-44" id="fhu-KP-Ncj"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="AtX-ST-Xse" secondAttribute="bottom" id="n09-6O-ef6"/>
+                            <constraint firstAttribute="trailing" secondItem="dHG-5b-vO2" secondAttribute="trailing" id="tjZ-IH-N3O"/>
                             <constraint firstItem="AtX-ST-Xse" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="y2d-Lx-xzj"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="biB-Sa-sC9"/>
+                                <exclude reference="fhu-KP-Ncj"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Road Trip DJ" id="P9h-y9-424">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="XXV-Nu-CaP">
@@ -50,9 +92,11 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="playerBar" destination="AtX-ST-Xse" id="iIk-Re-5OI"/>
+                        <outlet property="playlistDataSource" destination="9aE-mu-6tI" id="XSZ-4c-2ij"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <customObject id="9aE-mu-6tI" customClass="PlaylistDataSource"/>
             </objects>
             <point key="canvasLocation" x="1511.5" y="479.5"/>
         </scene>
