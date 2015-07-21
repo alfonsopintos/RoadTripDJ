@@ -27,7 +27,11 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="xqC-dk-OkQ"/>
                                     <barButtonItem systemItem="rewind" id="6VN-l4-y03"/>
                                     <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="GBu-JY-fwc"/>
-                                    <barButtonItem systemItem="play" id="cjN-OY-Gof"/>
+                                    <barButtonItem systemItem="play" id="cjN-OY-Gof">
+                                        <connections>
+                                            <action selector="playPause:" destination="BYZ-38-t0r" id="5aN-Sq-z8o"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="UsX-Ca-DIE"/>
                                     <barButtonItem systemItem="fastForward" id="OMh-F2-wqo"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="P14-MH-RfS"/>
@@ -51,6 +55,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="playerBar" destination="AtX-ST-Xse" id="iIk-Re-5OI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

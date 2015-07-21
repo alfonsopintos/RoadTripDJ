@@ -12,10 +12,60 @@
 @interface ViewController () <MPMediaPickerControllerDelegate>
 
 @property (nonatomic, strong) MPMediaItemCollection *playlist;
+@property (nonatomic, strong) MPMusicPlayerController *player;
+@property (nonatomic, weak) IBOutlet UIToolbar *playerBar;
+@property (nonatomic, strong) UIBarButtonItem *playButton;
 
 @end
 
 @implementation ViewController
+
+
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    self.player = [[MPMusicPlayerController alloc] init];
+}
+
+- (UIBarButtonItem *)playButtonItemForPlaybackState:(MPMusicPlaybackState)state {
+    UIBarButtonSystemItem systemItem;
+    if (state == MPMusicPlaybackStatePlaying) {
+        systemItem = UIBarButtonSystemItemPause;
+    } else {
+        systemItem = UIBarButtonSystemItemPlay;
+    }
+    
+    UIBarButtonItem *buttonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:systemItem target:self action:@selector(playPause:)];
+    return buttonItem;
+}
+
+-(void)setPlayButtonForPlaybackState:(MPMusicPlaybackState)state{
+    NSMutableArray *barButtonItems = [self.playerBar.items mutableCopy];
+    NSUInteger index = [barButtonItems indexOfObjectIdenticalTo:self.playButton];
+    [barButtonItems removeObjectAtIndex:index];
+    [barButtonItems insertObject:[self playButtonItemForPlaybackState:state]
+                         atIndex:index];
+    [self.playerBar setItems:barButtonItems];
+}
+
+-(void)togglePlayPause {
+    if (self.player.playbackState == MPMusicPlaybackStatePlaying) {
+        NSLog(@"pausing");
+        [self.player pause];
+    } else {
+        NSLog(@"playing");
+        [self.player play];
+    }
+    [self setPlayButtonForPlaybackState:self.player.playbackState];
+}
+
+#pragma mark - Actions
+
+- (IBAction)playPause:(id)sender {
+    NSLog(@"%ld", (long)self.player.playbackState);
+    self.playButton = sender;
+    [self togglePlayPause];
+}
 
 - (IBAction)addMusic:(id)sender {
     MPMediaPickerController *mediaPicker = [[MPMediaPickerController alloc] initWithMediaTypes:MPMediaTypeMusic];
@@ -26,13 +76,9 @@
     [self presentViewController:mediaPicker animated:YES completion:Nil];
 }
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-}
-
 #pragma mark - MPMediaPickerControllerDelegate
--(void)mediaPicker:(nonnull MPMediaPickerController *)mediaPicker didPickMediaItems:(nonnull MPMediaItemCollection *)mediaItemCollection {
+
+-(void)mediaPicker:(MPMediaPickerController *)mediaPicker didPickMediaItems:(MPMediaItemCollection *)mediaItemCollection {
     NSLog(@"%@", NSStringFromSelector(_cmd));
     
     if (!self.playlist) {
@@ -49,6 +95,11 @@
         NSLog(@"%d) %@ - %@", index++, item.artist, item.title);
     }
     
+    [self.player setQueueWithItemCollection:self.playlist];
+    if (!self.player.playbackState != MPMusicPlaybackStatePlaying) {
+        [self.player play];
+    }
+    [self.player play];
     [self dismissViewControllerAnimated:YES completion:Nil];
 }
 

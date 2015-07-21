@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="PCa-n2-b0r">
+                            <navigationBar contentMode="scaleToFill" barStyle="black" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PCa-n2-b0r">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <animations/>
                                 <constraints>
@@ -49,11 +49,17 @@
                         <constraints>
                             <constraint firstItem="Sra-8L-WMP" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="34Q-hV-yoD"/>
                             <constraint firstAttribute="trailing" secondItem="Sra-8L-WMP" secondAttribute="trailing" id="BLa-a6-HWw"/>
+                            <constraint firstItem="PCa-n2-b0r" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" constant="20" id="Nmd-PK-ekI"/>
                             <constraint firstItem="PCa-n2-b0r" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" id="dh2-CO-i3W"/>
                             <constraint firstAttribute="trailing" secondItem="PCa-n2-b0r" secondAttribute="trailing" id="jL4-1t-RRb"/>
                             <constraint firstItem="PCa-n2-b0r" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="svY-Km-eXa"/>
                             <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="Sra-8L-WMP" secondAttribute="bottom" id="zub-m1-ee6"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="dh2-CO-i3W"/>
+                            </mask>
+                        </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
