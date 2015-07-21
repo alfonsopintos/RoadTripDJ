@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE3748D81B5EEFF500239770 /* PlayerBar.m in Sources */ = {isa = PBXBuildFile; fileRef = BE3748D71B5EEFF500239770 /* PlayerBar.m */; };
 		BEBF44B91B4F23C100EEE58A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BEBF44B81B4F23C100EEE58A /* main.m */; };
 		BEBF44BC1B4F23C100EEE58A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BEBF44BB1B4F23C100EEE58A /* AppDelegate.m */; };
 		BEBF44BF1B4F23C100EEE58A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEBF44BE1B4F23C100EEE58A /* ViewController.m */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BE3748D61B5EEFF500239770 /* PlayerBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerBar.h; sourceTree = "<group>"; };
+		BE3748D71B5EEFF500239770 /* PlayerBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerBar.m; sourceTree = "<group>"; };
 		BEBF44B41B4F23C100EEE58A /* RoadTrip DJ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RoadTrip DJ.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEBF44B81B4F23C100EEE58A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BEBF44BA1B4F23C100EEE58A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -62,6 +65,8 @@
 				BEBF44BB1B4F23C100EEE58A /* AppDelegate.m */,
 				BEBF44BD1B4F23C100EEE58A /* ViewController.h */,
 				BEBF44BE1B4F23C100EEE58A /* ViewController.m */,
+				BE3748D61B5EEFF500239770 /* PlayerBar.h */,
+				BE3748D71B5EEFF500239770 /* PlayerBar.m */,
 				BEBF44C01B4F23C100EEE58A /* Main.storyboard */,
 				BEBF44C31B4F23C100EEE58A /* Assets.xcassets */,
 				BEBF44C51B4F23C100EEE58A /* LaunchScreen.storyboard */,
@@ -149,6 +154,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE3748D81B5EEFF500239770 /* PlayerBar.m in Sources */,
 				BEBF44BF1B4F23C100EEE58A /* ViewController.m in Sources */,
 				BEBF44BC1B4F23C100EEE58A /* AppDelegate.m in Sources */,
 				BEBF44B91B4F23C100EEE58A /* main.m in Sources */,
