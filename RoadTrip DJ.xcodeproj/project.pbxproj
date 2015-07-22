@@ -12,6 +12,8 @@
 		BE3748E01B5F188700239770 /* SamplePlaylistItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BE3748DF1B5F188700239770 /* SamplePlaylistItem.m */; };
 		BE3748E21B5F1E4600239770 /* SampleImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE3748E11B5F1E4600239770 /* SampleImages.xcassets */; };
 		BE3748E61B5F245000239770 /* PlaylistItemCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE3748E51B5F245000239770 /* PlaylistItemCollectionViewCell.m */; };
+		BE3748E91B5F2D0600239770 /* PlaylistHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE3748E81B5F2D0600239770 /* PlaylistHeaderView.m */; };
+		BE3748EB1B5F2D4A00239770 /* PlaylistHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE3748EA1B5F2D4A00239770 /* PlaylistHeaderView.xib */; };
 		BEBF44B91B4F23C100EEE58A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BEBF44B81B4F23C100EEE58A /* main.m */; };
 		BEBF44BC1B4F23C100EEE58A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BEBF44BB1B4F23C100EEE58A /* AppDelegate.m */; };
 		BEBF44BF1B4F23C100EEE58A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEBF44BE1B4F23C100EEE58A /* ViewController.m */; };
@@ -31,6 +33,9 @@
 		BE3748E11B5F1E4600239770 /* SampleImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = SampleImages.xcassets; sourceTree = "<group>"; };
 		BE3748E41B5F245000239770 /* PlaylistItemCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaylistItemCollectionViewCell.h; sourceTree = "<group>"; };
 		BE3748E51B5F245000239770 /* PlaylistItemCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaylistItemCollectionViewCell.m; sourceTree = "<group>"; };
+		BE3748E71B5F2D0600239770 /* PlaylistHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaylistHeaderView.h; sourceTree = "<group>"; };
+		BE3748E81B5F2D0600239770 /* PlaylistHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaylistHeaderView.m; sourceTree = "<group>"; };
+		BE3748EA1B5F2D4A00239770 /* PlaylistHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlaylistHeaderView.xib; sourceTree = "<group>"; };
 		BEBF44B41B4F23C100EEE58A /* RoadTrip DJ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RoadTrip DJ.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEBF44B81B4F23C100EEE58A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BEBF44BA1B4F23C100EEE58A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -69,6 +74,9 @@
 			children = (
 				BE3748E41B5F245000239770 /* PlaylistItemCollectionViewCell.h */,
 				BE3748E51B5F245000239770 /* PlaylistItemCollectionViewCell.m */,
+				BE3748E71B5F2D0600239770 /* PlaylistHeaderView.h */,
+				BE3748E81B5F2D0600239770 /* PlaylistHeaderView.m */,
+				BE3748EA1B5F2D4A00239770 /* PlaylistHeaderView.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -179,6 +187,7 @@
 			files = (
 				BEBF44C71B4F23C100EEE58A /* LaunchScreen.storyboard in Resources */,
 				BE3748E21B5F1E4600239770 /* SampleImages.xcassets in Resources */,
+				BE3748EB1B5F2D4A00239770 /* PlaylistHeaderView.xib in Resources */,
 				BEBF44C41B4F23C100EEE58A /* Assets.xcassets in Resources */,
 				BEBF44C21B4F23C100EEE58A /* Main.storyboard in Resources */,
 			);
@@ -196,6 +205,7 @@
 				BE3748E01B5F188700239770 /* SamplePlaylistItem.m in Sources */,
 				BEBF44BF1B4F23C100EEE58A /* ViewController.m in Sources */,
 				BE3748E61B5F245000239770 /* PlaylistItemCollectionViewCell.m in Sources */,
+				BE3748E91B5F2D0600239770 /* PlaylistHeaderView.m in Sources */,
 				BEBF44BC1B4F23C100EEE58A /* AppDelegate.m in Sources */,
 				BEBF44B91B4F23C100EEE58A /* main.m in Sources */,
 			);

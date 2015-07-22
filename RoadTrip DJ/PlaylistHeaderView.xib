@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8121.20" systemVersion="15A216g" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8101.16"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="PlaylistHeaderView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="439"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="test123" translatesAutoresizingMaskIntoConstraints="NO" id="SED-hP-i0L">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="439"/>
+                    <animations/>
+                </imageView>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m81-fL-7Xk">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="439"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="2uE-vZ-umm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="439"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="test123" translatesAutoresizingMaskIntoConstraints="NO" id="54A-pu-knM">
+                                <rect key="frame" x="38" y="70" width="300" height="300"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="54A-pu-knM" secondAttribute="height" multiplier="1:1" id="R5J-0Q-DSw"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GsR-Hj-oUe">
+                                <rect key="frame" x="38" y="378" width="300" height="18"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="um9-Ys-qW6">
+                                <rect key="frame" x="38" y="404" width="300" height="16"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <animations/>
+                        <constraints>
+                            <constraint firstItem="um9-Ys-qW6" firstAttribute="top" secondItem="GsR-Hj-oUe" secondAttribute="bottom" constant="8" id="1qx-qW-oda"/>
+                            <constraint firstItem="um9-Ys-qW6" firstAttribute="centerX" secondItem="GsR-Hj-oUe" secondAttribute="centerX" id="7cC-Aw-PhY"/>
+                            <constraint firstItem="GsR-Hj-oUe" firstAttribute="top" secondItem="54A-pu-knM" secondAttribute="bottom" constant="8" id="Dfh-6e-cJV"/>
+                            <constraint firstItem="GsR-Hj-oUe" firstAttribute="centerX" secondItem="2uE-vZ-umm" secondAttribute="centerX" id="Few-66-qdA"/>
+                            <constraint firstItem="54A-pu-knM" firstAttribute="top" secondItem="2uE-vZ-umm" secondAttribute="top" constant="70" id="GrH-di-GwN"/>
+                            <constraint firstItem="54A-pu-knM" firstAttribute="leading" secondItem="2uE-vZ-umm" secondAttribute="leading" constant="38" id="O74-o9-YWb"/>
+                            <constraint firstItem="GsR-Hj-oUe" firstAttribute="width" secondItem="54A-pu-knM" secondAttribute="width" id="UXi-r7-dXR"/>
+                            <constraint firstItem="um9-Ys-qW6" firstAttribute="width" secondItem="GsR-Hj-oUe" secondAttribute="width" id="nmw-iq-rhm"/>
+                            <constraint firstItem="54A-pu-knM" firstAttribute="centerX" secondItem="2uE-vZ-umm" secondAttribute="centerX" id="sTX-cj-scu"/>
+                            <constraint firstAttribute="trailing" secondItem="54A-pu-knM" secondAttribute="trailing" constant="37" id="wiU-Jr-4bf"/>
+                        </constraints>
+                    </view>
+                    <animations/>
+                    <blurEffect style="dark"/>
+                </visualEffectView>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="m81-fL-7Xk" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="1kd-Fl-83L"/>
+                <constraint firstItem="m81-fL-7Xk" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="FhD-H0-k5m"/>
+                <constraint firstAttribute="trailing" secondItem="m81-fL-7Xk" secondAttribute="trailing" id="Iuj-5j-LnQ"/>
+                <constraint firstAttribute="trailing" secondItem="SED-hP-i0L" secondAttribute="trailing" id="MfZ-yC-FGT"/>
+                <constraint firstAttribute="bottom" secondItem="SED-hP-i0L" secondAttribute="bottom" id="Rdq-0S-Qh3"/>
+                <constraint firstItem="SED-hP-i0L" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="UUt-N4-UxJ"/>
+                <constraint firstAttribute="bottom" secondItem="m81-fL-7Xk" secondAttribute="bottom" id="ZcF-7n-aE3"/>
+                <constraint firstItem="SED-hP-i0L" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ddy-o7-6mS"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="artistLabel" destination="um9-Ys-qW6" id="4eW-fW-ydl"/>
+                <outlet property="blurredImageView" destination="SED-hP-i0L" id="i39-2X-0tl"/>
+                <outlet property="imageView" destination="54A-pu-knM" id="gTN-n8-NOQ"/>
+                <outlet property="songLabel" destination="GsR-Hj-oUe" id="De1-gf-qjP"/>
+            </connections>
+            <point key="canvasLocation" x="564.5" y="210.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="test123" width="148" height="148"/>
+    </resources>
+</document>

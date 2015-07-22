@@ -8,6 +8,7 @@
 
 #import "PlaylistDataSource.h"
 #import "PlaylistItemCollectionViewCell.h"
+#import "PlaylistHeaderView.h"
 
 @implementation PlaylistDataSource
 
@@ -29,6 +30,18 @@
     cell.songLabel.text = playlistItem.song;
 
     return cell;
+}
+
+- (UICollectionReusableView *)collectionView:(nonnull UICollectionView *)collectionView viewForSupplementaryElementOfKind:(nonnull NSString *)kind atIndexPath:(nonnull NSIndexPath *)indexPath {
+    if ([kind isEqualToString:UICollectionElementKindSectionHeader]) {
+        PlaylistHeaderView *header = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader
+                                                                        withReuseIdentifier:@"header"
+                                                                               forIndexPath:indexPath];
+        [header setPlaylistItem:self.items[0] animated:YES];
+        return header;
+    } else {
+        return nil;
+    }
 }
 
 @end
