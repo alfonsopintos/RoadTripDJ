@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8101.16"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Road Trip DJ-->
@@ -21,24 +22,63 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="eV5-md-6li">
-                                    <size key="itemSize" width="360" height="50"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="4" minimumInteritemSpacing="0.0" id="eV5-md-6li">
+                                    <size key="itemSize" width="360" height="60"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="qAu-CF-lYW">
-                                        <rect key="frame" x="8" y="64" width="360" height="50"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="qAu-CF-lYW" customClass="PlaylistItemCollectionViewCell">
+                                        <rect key="frame" x="8" y="64" width="360" height="60"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="360" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="360" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qjV-28-JxC">
+                                                    <rect key="frame" x="8" y="0.0" width="60" height="60"/>
+                                                    <animations/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="60" id="Mzl-v0-Zxs"/>
+                                                        <constraint firstAttribute="width" constant="60" id="WHz-cx-qbS"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TBJ-OT-eD6">
+                                                    <rect key="frame" x="81" y="6" width="78" height="21"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="muR-xq-8kA">
+                                                    <rect key="frame" x="83" y="33" width="37" height="16"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                             <animations/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <animations/>
-                                        <color key="backgroundColor" red="0.92039834529999998" green="0.26564412710000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.18288352272727271" green="0.18288352272727271" blue="0.18288352272727271" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="muR-xq-8kA" secondAttribute="trailing" constant="4" id="Ah4-U0-8Ic"/>
+                                            <constraint firstItem="qjV-28-JxC" firstAttribute="top" secondItem="qAu-CF-lYW" secondAttribute="top" id="CYI-hT-cex"/>
+                                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="TBJ-OT-eD6" secondAttribute="trailing" constant="4" id="DIW-aY-ycl"/>
+                                            <constraint firstItem="muR-xq-8kA" firstAttribute="leading" secondItem="TBJ-OT-eD6" secondAttribute="leading" constant="2" id="DzJ-TU-bzP"/>
+                                            <constraint firstAttribute="topMargin" secondItem="TBJ-OT-eD6" secondAttribute="top" constant="2" id="ET4-b1-1qK"/>
+                                            <constraint firstItem="qjV-28-JxC" firstAttribute="leading" secondItem="qAu-CF-lYW" secondAttribute="leading" constant="8" id="HWk-pc-yOb"/>
+                                            <constraint firstItem="muR-xq-8kA" firstAttribute="top" secondItem="TBJ-OT-eD6" secondAttribute="bottom" constant="6" id="L5Z-Db-vTX"/>
+                                            <constraint firstItem="TBJ-OT-eD6" firstAttribute="leading" secondItem="qjV-28-JxC" secondAttribute="trailing" constant="13" id="wQ1-3I-ppd"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="artistLabel" destination="muR-xq-8kA" id="DV8-Tz-z5R"/>
+                                            <outlet property="imageView" destination="qjV-28-JxC" id="kKr-1i-2as"/>
+                                            <outlet property="songLabel" destination="TBJ-OT-eD6" id="XqT-lr-ewN"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
@@ -96,7 +136,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <customObject id="9aE-mu-6tI" customClass="PlaylistDataSource"/>
+                <customObject id="9aE-mu-6tI" customClass="PlaylistDataSource">
+                    <connections>
+                        <outlet property="collectionView" destination="dHG-5b-vO2" id="MSi-78-st1"/>
+                    </connections>
+                </customObject>
             </objects>
             <point key="canvasLocation" x="1511.5" y="479.5"/>
         </scene>

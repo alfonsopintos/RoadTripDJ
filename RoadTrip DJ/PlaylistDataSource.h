@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PlaylistItem.h"
 
 @interface PlaylistDataSource : NSObject <UICollectionViewDataSource>
+
+@property (nonatomic, weak) IBOutlet UICollectionView *collectionView;
+
+@property (nonatomic, strong) NSArray *items;
 
 @end
