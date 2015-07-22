@@ -11,6 +11,8 @@
 
 @interface PlaylistDataSource : NSObject <UICollectionViewDataSource>
 
+@property (nonatomic, assign) NSInteger currentTrackIndex;
+
 @property (nonatomic, weak) IBOutlet UICollectionView *collectionView;
 
 @property (nonatomic, strong) NSArray *items;

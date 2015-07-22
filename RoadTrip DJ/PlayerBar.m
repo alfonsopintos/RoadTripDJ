@@ -91,6 +91,9 @@
            compatibleWithTraitCollection:self.traitCollection];
     
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    [button addTarget:target
+               action:action
+     forControlEvents:UIControlEventTouchUpInside];
     [button setImage:[image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
     [button setImage:[selectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateHighlighted];
     button.frame = CGRectMake(0, 0, image.size.width * 2, image.size.height * 2);
@@ -102,19 +105,34 @@
 -(UIBarButtonItem *)skipBackButton {
     return [self buttonWIthImage:@"1247-skip-back-toolbar"
                    selectedImage:@"1247-skip-back-toolbar-selected"
-                          target:nil action:nil];
+                          target:self
+                          action:@selector(skipBack:)];
 }
 
 -(UIBarButtonItem *)playButton {
     return [self buttonWIthImage:@"1241-play-toolbar"
                    selectedImage:@"1241-play-toolbar-selected"
-                          target:nil action:nil];
+                          target:self
+                          action:@selector(playerBarPlayPause:)];
 }
 
 -(UIBarButtonItem *)skipForwardButton {
     return [self buttonWIthImage:@"1248-skip-ahead-toolbar"
                    selectedImage:@"1248-skip-ahead-toolbar"
-                          target:nil action:nil];
+                          target:self
+                          action:@selector(skipForward:)];
+}
+
+-(void)skipBack:(id)sender {
+    [self.playerBarDelegate playerBarPreviousTrack:self];
+}
+
+-(void)skipForward:(id)sender {
+    [self.playerBarDelegate playerBarNextTrack:self];
+}
+
+-(void)playPause:(id)sender {
+    [self.playerBarDelegate playerBarPlayPause:self];
 }
 
 @end
